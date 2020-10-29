@@ -1,10 +1,10 @@
 ::root {
-    --color-background: (246, 177, 177);
-    --color-shadow: (51, 51, 51);
-    --color-nav: (220, 27, 27);
-    --color-spotlight: (171, 171, 171);
-    --color-textbackground: (211, 211, 211);
-    --color-text: (111, 111, 111);
+    --background: rgb(246, 177, 177);
+    --shadow: rgb(51, 51, 51);
+    --nav: rgb(220, 27, 27);
+    --spotlight: rgb(171, 171, 171);
+    --textbackground: rgb(211, 211, 211);
+    --color-text: rgb(111, 111, 111);
 }
 
 article, aside, figcaption, figure,
@@ -30,7 +30,7 @@ body {
     line-height: 1.2em;
 }
 
-ul, ol {
+ul ol {
     list-style: none;
 }
 
@@ -43,22 +43,22 @@ nav a {
 }
 
 html {
-    background-color: var(--color-background);
-    font-family: Verdana, sans-serif;
+    background-color: var(--background);
+    font-family: Verdana, Geneva, sans-serif;
     font-size: 12px;
 }
 body {
     background-color: white;
     max-width: 1024px;
     margin: 0 auto;
-    box-shadow: var(--color-shadow) 10px 10px 25px, var(--color-shadow) -10px 10px 25px;
+    box-shadow: var(--shadow) 10px 10px 25px, var(--shadow) -10px 10px 25px;
 }
-header > body {
+header body {
     background-color: white;
     width: 100%;
 }
 
-img #logoImage {
+#logoImage {
     display: block;
     width: 100%;
     max-width: 600px;
@@ -71,10 +71,10 @@ p {
     margin: 15px;
 }
 
-ul, nav .top {
+nav ul, .top {
     margin: 10px;
 }
-ul, nav, a .top {
+nav ul a, .top{
     color: white;
     display: block;
     font-size: 1.2rem;
@@ -85,19 +85,28 @@ ul, nav, a .top {
     padding-bottom: 5%;
 }
 
-ul, nav, a, a:hover .top {
-    background-color: var(--color-nav);
+nav ul a:hover, .top {
+    background-color: var(--nav);
     text-shadow: 0px 0px 2px black 0px 0px 15px white;
 }
-/* Add # 3 from page 3*/
+p img {
+    float: right;
+    width: 45%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 120px;
+    margin-left: 50px;
+    box-shadow: black 10px -10px 30px;
+    transform: rotate(30deg);
+}
 
-.spotlight {
-    background-color: var(--color-spotlight);
+section, .spotlight {
+    background-color: var(--spotlight);
     padding-bottom: 15px;
     overflow: hidden;
 }
 
-.spotlight h1 {
+section h1, .spotlight {
     font-size: 2.5rem;
     color: var(--color-text);
     text-shadow: white -2px 0px 1px, white -5px 0px 30px;
@@ -108,7 +117,7 @@ ul, nav, a, a:hover .top {
     text-align: end;
 }
 
-section .spotlight img {
+section img, .spotlight {
     width: 35%;
     float: left;
     display: block;
@@ -117,19 +126,19 @@ section .spotlight img {
     margin-bottom: 10px;
     margin-left: 15px;
 }
-section .spotlight p {
+section p, .spotlight {
     margin-bottom: 0;
 }
 
 aside {
-    background-color: var(--color-background);
+    background-color: var(--background);
 }
 
-aside, a {
-    color: var(--color-nav);
+aside a {
+    color: var(--nav);
 }
 
-aside, h1 {
+aside h1 {
     font-size: 2rem;
     font-weight: normal;
     word-spacing: .4rem;
@@ -139,7 +148,7 @@ aside, h1 {
     margin-bottom: 25px;
     margin-left: 0px;
 }
-aside, img {
+aside img {
     display: block;
     width: 30%;
     margin: 0 auto;
@@ -153,24 +162,25 @@ dl {
 footer {
     width: 100%;
 }
-dl, dd {
+dl dt {
     margin-bottom: 20px;
 }
 
-nav #bottom {
-    background-color: var(--color-nav);
+#bottom nav {
+    background-color: var(--nav);
     color: var(--color-text);
     padding: 15px;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
 }
 
-nav #bottom ul, li {
+#bottom nav ul li {
     font-size: 1rem;
     line-height: 1.8rem;
 }
-nav #bottom ul, a {
+#bottom nav ul a {
     color: white;
 }
 
@@ -185,7 +195,7 @@ footer p {
     padding-bottom: 10px;
     padding-left: 10px;
 }
-nav #bottom ul {
+#bottom nav ul {
     display: flex;
     flex-grow: initial;
     flex-shrink: unset;
@@ -193,10 +203,108 @@ nav #bottom ul {
 }
 @media(max-width: 480px) {
     body {
-        background-color: var(--color-shadow);
-        color: var(--color-textbackground);
+        background-color: var(--shadow);
+        color: var(--textbackground);
     }
     aside {
         display: none;
     }
+    img {
+        display: none;
+    }
+    section, .spotlight {
+        display: none;
+    }
+    nav ul, .top {
+        font-size: 2.2rem;
+        display: flex;
+        size: 130px;
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+    nav ul li a, .top {
+        padding-top: 50%;
+        padding-bottom: 50%;
+        padding-right: 0%;
+        padding-left: 0%;
+    }
+    nav.top ul li:nth-of-type(1) {
+        background-image: url(images/cw_image01.png);
+        background: center;
+        flex-wrap: nowrap;
+    }
+    nav.top ul li:nth-of-type(1) {
+        background-image: url(images/cw_image02.png);
+        background: center;
+        flex-wrap: nowrap;
+    }
+    nav.top ul li:nth-of-type(1) {
+        background-image: url(images/cw_image03.png);
+        background: center;
+        flex-wrap: nowrap;
+    }
+    nav.top ul li:nth-of-type(1) {
+        background-image: url(images/cw_image04.png);
+        background: center;
+        flex-wrap: nowrap;
+    }
+    nav.top ul li:nth-of-type(1) {
+        background-image: url(images/cw_image05.png);
+        background: center;
+        flex-wrap: nowrap;
+    }
+    nav.top ul li:nth-of-type(1) {
+        background-image: url(images/cw_image06.png);
+        background: center;
+        flex-wrap: nowrap;
+    }
+    #links p {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #links a {
+        background-color: var(--nav);
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}
+
+@media(max-width: 481) {
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    article {
+        flex-shrink: 1;
+        flex-grow: 2;
+        flex-basis: 400px;
+    }
+    aside {
+        flex-shrink: 2;
+        flex-grow: 1;
+        flex-basis: 200px;
+    }
+    nav ul li, .top {
+        display: flexbox;
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-color: var(--shadow);
+        height: 50px;
+        justify-content: center;
+        justify-items: center;
+    }
+    nav ul li, .top {
+        flex-basis: 800px;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+    #links p {
+        display: none;
+    }
+
 }
