@@ -234,27 +234,27 @@ nav ul, .bottom {
         flex-wrap: nowrap;
     }
     nav.top ul li:nth-of-type(2) {
-        background-image: url(images/cw_image01.png);
+        background-image: url(images/cw_image02.png);
         background: center;
         flex-wrap: nowrap;
     }
     nav.top ul li:nth-of-type(3) {
-        background-image: url(images/cw_image01.png);
+        background-image: url(images/cw_image03.png);
         background: center;
         flex-wrap: nowrap;
     }
     nav.top ul li:nth-of-type(4) {
-        background-image: url(images/cw_image01.png);
+        background-image: url(images/cw_image04.png);
         background: center;
         flex-wrap: nowrap;
     }
     nav.top ul li:nth-of-type(5) {
-        background-image: url(images/cw_image01.png);
+        background-image: url(images/cw_image05.png);
         background: center;
         flex-wrap: nowrap;
     }
     nav.top ul li:nth-of-type(6) {
-        background-image: url(images/cw_image01.png);
+        background-image: url(images/cw_image06.png);
         background: center;
         flex-wrap: nowrap;
     }
