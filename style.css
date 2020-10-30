@@ -1,7 +1,7 @@
-::root {
+:root {
     --background: rgb(246, 177, 177);
     --shadow: rgb(51, 51, 51);
-    --nav: rgb(220, 27, 27);
+    --nav-active: rgb(220, 27, 27);
     --spotlight: rgb(171, 171, 171);
     --textbackground: rgb(211, 211, 211);
     --color-text: rgb(111, 111, 111);
@@ -53,12 +53,12 @@ body {
     margin: 0 auto;
     box-shadow: var(--shadow) 10px 10px 25px, var(--shadow) -10px 10px 25px;
 }
-header body {
+header > body {
     background-color: white;
     width: 100%;
 }
 
-#logoImage {
+img, .logoImage {
     display: block;
     width: 100%;
     max-width: 600px;
@@ -86,7 +86,7 @@ nav ul a, .top{
 }
 
 nav ul a:hover, .top {
-    background-color: var(--nav);
+    color: var(--nav-active);
     text-shadow: 0px 0px 2px black 0px 0px 15px white;
 }
 p img {
@@ -135,7 +135,7 @@ aside {
 }
 
 aside a {
-    color: var(--nav);
+    color: var(--nav-active);
 }
 
 aside h1 {
@@ -166,8 +166,8 @@ dl dt {
     margin-bottom: 20px;
 }
 
-#bottom nav {
-    background-color: var(--nav);
+nav, .bottom {
+    background-color: var(--nav-active);
     color: var(--color-text);
     padding: 15px;
     display: flex;
@@ -176,11 +176,11 @@ dl dt {
     justify-content: center;
 }
 
-#bottom nav ul li {
+nav ul li, .bottom {
     font-size: 1rem;
     line-height: 1.8rem;
 }
-#bottom nav ul a {
+nav ul a, .bottom {
     color: white;
 }
 
@@ -195,7 +195,7 @@ footer p {
     padding-bottom: 10px;
     padding-left: 10px;
 }
-#bottom nav ul {
+nav ul, .bottom {
     display: flex;
     flex-grow: initial;
     flex-shrink: unset;
@@ -233,39 +233,39 @@ footer p {
         background: center;
         flex-wrap: nowrap;
     }
-    nav.top ul li:nth-of-type(1) {
-        background-image: url(images/cw_image02.png);
+    nav.top ul li:nth-of-type(2) {
+        background-image: url(images/cw_image01.png);
         background: center;
         flex-wrap: nowrap;
     }
-    nav.top ul li:nth-of-type(1) {
-        background-image: url(images/cw_image03.png);
+    nav.top ul li:nth-of-type(3) {
+        background-image: url(images/cw_image01.png);
         background: center;
         flex-wrap: nowrap;
     }
-    nav.top ul li:nth-of-type(1) {
-        background-image: url(images/cw_image04.png);
+    nav.top ul li:nth-of-type(4) {
+        background-image: url(images/cw_image01.png);
         background: center;
         flex-wrap: nowrap;
     }
-    nav.top ul li:nth-of-type(1) {
-        background-image: url(images/cw_image05.png);
+    nav.top ul li:nth-of-type(5) {
+        background-image: url(images/cw_image01.png);
         background: center;
         flex-wrap: nowrap;
     }
-    nav.top ul li:nth-of-type(1) {
-        background-image: url(images/cw_image06.png);
+    nav.top ul li:nth-of-type(6) {
+        background-image: url(images/cw_image01.png);
         background: center;
         flex-wrap: nowrap;
     }
-    #links p {
+    p, .links {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
         justify-content: space-between;
     }
-    #links a {
-        background-color: var(--nav);
+    a, .links {
+        background-color: var(--nav-active);
         color: white;
         text-decoration: none;
         padding: 10px;
@@ -303,7 +303,7 @@ footer p {
         flex-grow: 0;
         flex-shrink: 1;
     }
-    #links p {
+    p, .links {
         display: none;
     }
 
